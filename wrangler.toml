@@ -6,3 +6,6 @@ compatibility_date = "2024-08-29"
 TELEGRAM_BOT_TOKEN = "TU_TOKEN_DE_TELEGRAM"
 RETELL_API_KEY = "TU_API_KEY_RETELL"
 QUEUE_NAME = "agents-queue"
+[[kv_namespaces]]
+binding = "AGENTS_KV"
+id = "107bf9e3db69499f9f8d61d733fd435d"
