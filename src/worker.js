@@ -21,10 +21,18 @@ export default {
         }),
       });
 
-      const status_key = agentId === "agent_2034d1ed26b7511957e3168643" ? "AGENT1_STATUS" : "AGENT2_STATUS";
+      const status_key =
+        agentId === "agent_2034d1ed26b7511957e3168643"
+          ? "AGENT1_STATUS"
+          : "AGENT2_STATUS";
+
       await env.AGENTS_KV.put(status_key, "free");
 
       return new Response("Task processed by " + agentId);
-   } catch (error) {
-  console.log("ERROR:", error.message);
-  return new Response("Error processed");
+    } catch (error) {
+      console.log("ERROR:", error.message);
+      return new Response("Error processed", { status: 500 });
+    }
+  },
+};
+
