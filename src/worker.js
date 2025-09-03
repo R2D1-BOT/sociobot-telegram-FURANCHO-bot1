@@ -25,6 +25,6 @@ export default {
       await env.AGENTS_KV.put(status_key, "free");
 
       return new Response("Task processed by " + agentId);
-    }  catch (error) {
+   } catch (error) {
   console.log("ERROR:", error.message);
   return new Response("Error processed");
